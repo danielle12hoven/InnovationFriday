@@ -1,0 +1,25 @@
+<div class="title-text">
+  <h2><%= gettext "This is our %{name} 'get to know each' app", name: "WeTransfer" %></h2>
+  <p class="lead">The goal here is to get the departments to interact<br/>and get to know one another better.<br/> Fun right?</p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+    <h4>Department</h4>
+      <%= link "Tech", to: user_path(@conn, :index) %>
+      <br>
+      <%= link "Support", to: user_path(@conn, :index) %>
+      <br>
+      <%= link "Sales", to: user_path(@conn, :index) %>
+      <br>
+      <%= link "Design", to: user_path(@conn, :index) %>
+      <br>
+      <%= link "Studio", to: user_path(@conn, :index) %>
+  </div>
+
+  <div class="col-lg-6">
+    <h4>People</h4>
+    <!-- <%= render @view_module, @view_template, assigns %> -->
+    <!-- <%= link "Back", to: user_path(@conn, :index) %> -->
+  </div>
+</div>
