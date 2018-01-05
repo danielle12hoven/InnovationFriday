@@ -15,4 +15,5 @@
 </ul>
 
 <%= link "Edit", to: user_path(@conn, :edit, @user) %>
+<br/>
 <%= link "Back", to: user_path(@conn, :index) %>
