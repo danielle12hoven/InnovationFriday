@@ -13,6 +13,7 @@ body, form, ul, table {
   margin-top: 20px;
   margin-bottom: 20px;
   background-color:  #FEDF93;
+  text-align: center;
 }
 
 /* Phoenix flash messages */
@@ -36,6 +37,7 @@ form.link, form.button {
     max-width: 730px;
   }
 }
+
 .container-narrow > hr {
   margin: 30px 0;
 }

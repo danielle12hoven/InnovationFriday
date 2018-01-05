@@ -27,7 +27,6 @@
 <% end %>
   </tbody>
 </table>
-      <%= link "Tech", to: user_path(@conn, :index) %>
-<a href="/">Home</a>
-<br/>
 <%= link "New", to: user_path(@conn, :new) %>
+<br/>
+<a href="/">Home</a>

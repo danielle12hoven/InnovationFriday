@@ -18,7 +18,13 @@ defmodule Walking.Router do
 
     get "/", PageController, :index
     resources "/users", UserController
+
+    get "/", PageController, :tech
+    resources "/tech", UserController
+
   end
+
+
 
   # Other scopes may use custom stacks.
   # scope "/api", Walking do

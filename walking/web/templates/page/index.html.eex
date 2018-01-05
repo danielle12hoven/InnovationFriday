@@ -1,6 +1,6 @@
 <div class="title-text">
-  <h2><%= gettext "This is our %{name} 'get to know each' app", name: "WeTransfer" %></h2>
-  <p class="lead">The goal here is to get the departments to interact<br/>and get to know one another better.<br/> Fun right?</p>
+  <h2 class="sub-header"><%= gettext "This is our %{name} 'get to know eachother' app", name: "WeTransfer" %></h2>
+  <p class="lead">The goal is to get the departments to interact and get to know eachother better.<br/> Fun right?</p>
 </div>
 
 <div class="row marketing">
@@ -20,10 +20,18 @@
   </div>
 
   <div class="col-lg-6">
-    <button>Randomize</button>
-    <%= message() %>
-    <%= render "user/index" %>
+    <button id="generateName">Generate</button>
+    <script type="text/javascript">
 
+    var addNames = function(){  
+      document.getElementById('nameHere').appendChild( <%= generate_name %>);
+    }
+
+    document.getElementById("generateName").addEventListener('click', addNames);
+
+    </script>
+    <p id="nameHere"></p>
+     <%= generate_name %>
   </div>
 </div>
 

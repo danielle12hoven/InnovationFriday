@@ -8,6 +8,11 @@ defmodule Walking.UserController do
     render(conn, "index.html", users: users)
   end
 
+  def tech(conn, _params) do
+    tech = Repo.all(User)
+    render(conn, "tech.html", tech: tech)
+  end
+
   def new(conn, _params) do
     changeset = User.changeset(%User{})
     render(conn, "new.html", changeset: changeset)
