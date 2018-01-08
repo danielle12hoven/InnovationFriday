@@ -15,23 +15,26 @@
       <%= link "Design", to: user_path(@conn, :index) %>
       <br>
       <%= link "Studio", to: user_path(@conn, :index) %>
-      <br/>
-      <p>etc.</p>
   </div>
 
   <div class="col-lg-6">
-    <button id="generateName">Generate</button>
-    <script type="text/javascript">
+  
 
-    var addNames = function(){  
-      document.getElementById('nameHere').appendChild( <%= generate_name %>);
-    }
+  <%= button("Generate", to: "/", method: "get") %>
 
-    document.getElementById("generateName").addEventListener('click', addNames);
+  <button id="generateName">Generate JS button</button>
 
-    </script>
-    <p id="nameHere"></p>
-     <%= generate_name %>
+  <script type="text/javascript">
+
+  var addNames = function(){  
+    document.getElementById('nameHere').appendChild( <%= generate_name %>);
+  }
+
+  document.getElementById("generateName").addEventListener('click', addNames);
+
+  </script>
+  <p id="nameHere"></p>
+   <%= generate_name %>
   </div>
 </div>
 
